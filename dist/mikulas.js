@@ -1,3 +1,16 @@
+//            _  _         _              _
+//    ._ _ _ <_>| |__ _ _ | | ___  ___   <_> ___
+//    | ' ' || || / /| | || |<_> |<_-< _ | |<_-<
+//    |_|_|_||_||_\_\`___||_|<___|/__/<_>| |/__/
+//                                      <__'
+// mikulas.js
+// Version: 0.2.0
+// Author: Dino Paskvan
+// Mail: dpaskvan@gmail.com
+// Web: http://www.dinopaskvan.com
+// Copyright (c) 2014 Dino Paskvan
+// Licence : MIT
+
 /**
 * Creates a new Mikulas object
 * @param {String} h The id of the hours clock hand element
