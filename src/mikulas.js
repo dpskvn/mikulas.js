@@ -1,3 +1,16 @@
+//            _  _         _              _
+//    ._ _ _ <_>| |__ _ _ | | ___  ___   <_> ___
+//    | ' ' || || / /| | || |<_> |<_-< _ | |<_-<
+//    |_|_|_||_||_\_\`___||_|<___|/__/<_>| |/__/
+//                                      <__'
+// mikulas.js
+// Version: 0.2.0
+// Author: Dino Paskvan
+// Mail: dpaskvan@gmail.com
+// Web: http://www.dinopaskvan.com
+// Copyright (c) 2014 Dino Paskvan
+// Licence : MIT
+
 /**
 * Creates a new Mikulas object
 * @param {String} h The id of the hours clock hand element
@@ -10,6 +23,15 @@ function Mikulas(h, m, s, callback) {
   this.h = document.getElementById(h);
   this.m = document.getElementById(m);
   this.s = document.getElementById(s);
+  if (this.h === null) {
+    throw new Error("No element with the id '" + h + "'!");
+  }
+  if (this.m === null) {
+    throw new Error("No element with the id '" + m + "'!");
+  }
+  if (this.s === null) {
+    throw new Error("No element with the id '" + s + "'!");
+  }
   this.date = new Date();
   this.callback = callback;
 }
@@ -21,7 +43,7 @@ function Mikulas(h, m, s, callback) {
 
 Mikulas.prototype.getSecondsAngle = function() {
   return this.date.getSeconds() * 6;
-}
+};
 
 /**
 * Retrieves the angle of the minutes hand for the currently set time
@@ -30,7 +52,7 @@ Mikulas.prototype.getSecondsAngle = function() {
 
 Mikulas.prototype.getMinutesAngle = function() {
   return this.date.getMinutes() * 6;
-}
+};
 
 /**
 * Retrieves the angle of the hours hand for the currently set time
@@ -39,7 +61,7 @@ Mikulas.prototype.getMinutesAngle = function() {
 
 Mikulas.prototype.getHoursAngle = function() {
   return this.date.getHours() * 30 + Math.round(this.date.getMinutes() / 2);
-}
+};
 
 /**
 * Retrieves the amount of minutes elapsed today
@@ -48,7 +70,7 @@ Mikulas.prototype.getHoursAngle = function() {
 
 Mikulas.prototype.getElapsedMinutes = function() {
   return this.date.getHours() * 60 + this.date.getMinutes();
-}
+};
 
 /**
 * Rotates the specified element by the amount passed
@@ -62,7 +84,7 @@ Mikulas.prototype.rotateElement = function(el, amount) {
   el.style.msTransform = "rotate(" + amount + "deg)";
   el.style.OTransform = "rotate(" + amount + "deg)";
   el.style.transform = "rotate(" + amount + "deg)";
-}
+};
 
 /**
 * Sets the clock time to the date passed
@@ -77,7 +99,7 @@ Mikulas.prototype.setClockTime = function(date) {
   if (typeof this.callback === 'function') {
     this.callback();
   }
-}
+};
 
 /**
 * Starts the clock
@@ -88,7 +110,7 @@ Mikulas.prototype.start = function () {
     var date = new Date();
     this.setClockTime(date);
   }.bind(this), 1000);
-}
+};
 
 /**
 * Stops the clock
@@ -96,4 +118,4 @@ Mikulas.prototype.start = function () {
 
 Mikulas.prototype.stop = function () {
   clearInterval(this.interval);
-}
+};

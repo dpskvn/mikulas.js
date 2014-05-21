@@ -1,11 +1,11 @@
 {
-  "name": "mikulas.js",
-  "version": "0.1.0",
+  "name": "mikulas",
+  "version": "0.2.0",
   "authors": [
     "Dino Paskvan <dpaskvan@gmail.com>"
   ],
   "description": "A JS clock library",
-  "main": "mikulas.js",
+  "main": "dist/mikulas.js",
   "moduleType": [
     "globals"
   ],
