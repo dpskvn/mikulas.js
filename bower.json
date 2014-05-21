@@ -1,0 +1,27 @@
+{
+  "name": "mikulas.js",
+  "version": "0.1.0",
+  "authors": [
+    "Dino Paskvan <dpaskvan@gmail.com>"
+  ],
+  "description": "A JS clock library",
+  "main": "mikulas.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "clock",
+    "time",
+    "mikulas"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.dinopaskvan.com/mikulas.js/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ]
+}

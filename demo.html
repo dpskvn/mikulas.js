@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="http://codepen.io/dpskvn/pen/yncga" />
+  <title>A Minimal Clock — An SVG Experiment</title>
+  <style>
+    /* Just centering the div */
+    #svg {
+      width: 584px;
+      float: left;
+    }
+    #cl {
+      width: 180px;
+      height: 180px;
+      position: relative;
+      background: #EEE;
+      margin-top: 200px;
+      margin-right: 100px;
+      border-radius: 100%;
+      float: right;
+    }
+    #h {
+      position: absolute;
+      width: 6px;
+      height: 54px;
+      background: #333;
+      top: 36px;
+      left: 87px;
+      -webkit-transform-origin: bottom;
+    }
+    #m {
+      position: absolute;
+      width: 4px;
+      height: 66px;
+      background: #333;
+      top: 24px;
+      left: 88px;
+      -webkit-transform-origin: bottom;
+    }
+    #s {
+      position: absolute;
+      width: 2px;
+      height: 76px;
+      background: #DD3131;
+      top: 14px;
+      left: 89px;
+      -webkit-transform-origin: bottom;
+    }
+    #c {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      background: #DD3131;
+      top: 85px;
+      left: 85px;
+      border-radius: 100%;
+    }
+  </style>
+</head>
+<body>
+<div id="svg">
+  <svg width="584px" height="584px" viewBox="0 0 584 584" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>A Minimal Clock</title>
+    <description>An SVG Experiment by @dpskvn</description>
+    <defs>
+      <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="shadowGradient">
+        <stop stop-color="#000000" stop-opacity="0.3" offset="0%"></stop>
+        <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <g id="clock" transform="translate(191, 194)">
+      <path transform-origin="top" d="M20,90 L0,335 L220,335 L200,90 L20,90 Z" id="shadow" fill="url(#shadowGradient)"></path>
+      <circle id="face" transform-origin="bottom" fill="#F2F2F2" cx="110" cy="90" r="90"></circle>
+      <rect id="hours" transform-origin="bottom" fill="#333333" x="107" y="36" width="6" height="54"></rect>
+      <rect id="minutes" transform-origin="bottom" fill="#333333" x="108" y="24" width="4" height="66"></rect>
+      <rect id="seconds" transform-origin="bottom" fill="#DD3131" x="109" y="14" width="2" height="76"></rect>
+      <circle id="middle" transform-origin="bottom" fill="#DD3131" cx="110" cy="90" r="5"></circle>
+    </g>
+  </svg>
+</div>
+<div id="cl">
+  <div id ="h"></div>
+  <div id="m"></div>
+  <div id="s"></div>
+  <div id="c"></div>
+</div>
+<script src="mikulas.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>
