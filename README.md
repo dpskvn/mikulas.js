@@ -1,5 +1,5 @@
 # mikulas.js
-
+[![Build Status](https://travis-ci.org/dpskvn/mikulas.js.svg?branch=master)](https://travis-ci.org/dpskvn/mikulas.js)
 ## Usage
 
 Grab the library and create a new instance of the Mikulas object, passing the ids of clock hand elements. You can also pass an optional callback function which will get executed every time the clock is updated.
