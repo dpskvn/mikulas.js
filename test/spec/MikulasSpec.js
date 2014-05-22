@@ -17,6 +17,26 @@ describe("Mikulas", function() {
     });
   });
 
+  it("should set the transform-origin property for hands", function() {
+    expect(clock.h.style.webkitTransformOrigin).toBe("50% 100%");
+    expect(clock.h.style.MozTransformOrigin).toBe("bottom");
+    expect(clock.h.style.msTransformOrigin).toBe("bottom");
+    expect(clock.h.style.OTransformOrigin).toBe("bottom");
+    expect(clock.h.style.transformOrigin).toBe("bottom");
+    
+    expect(clock.m.style.webkitTransformOrigin).toBe("50% 100%");
+    expect(clock.m.style.MozTransformOrigin).toBe("bottom");
+    expect(clock.m.style.msTransformOrigin).toBe("bottom");
+    expect(clock.m.style.OTransformOrigin).toBe("bottom");
+    expect(clock.m.style.transformOrigin).toBe("bottom");
+    
+    expect(clock.s.style.webkitTransformOrigin).toBe("50% 100%");
+    expect(clock.s.style.MozTransformOrigin).toBe("bottom");
+    expect(clock.s.style.msTransformOrigin).toBe("bottom");
+    expect(clock.s.style.OTransformOrigin).toBe("bottom");
+    expect(clock.s.style.transformOrigin).toBe("bottom");
+  });
+
   it("should have a date property", function() {
     expect(clock.date).toBeDefined();
     expect(clock.date instanceof Date).toBe(true);

@@ -32,9 +32,32 @@ function Mikulas(h, m, s, callback) {
   if (this.s === null) {
     throw new Error("No element with the id '" + s + "'!");
   }
+  this.setTransformOrigin();
   this.date = new Date();
   this.callback = callback;
 }
+
+/**
+* Sets transform-origin to "bottom" for hand elements
+*/
+
+Mikulas.prototype.setTransformOrigin = function () {
+  this.h.style.webkitTransformOrigin = "bottom";
+  this.h.style.MozTransformOrigin = "bottom";
+  this.h.style.msTransformOrigin = "bottom";
+  this.h.style.OTransformOrigin = "bottom";
+  this.h.style.transformOrigin = "bottom";
+  this.m.style.webkitTransformOrigin = "bottom";
+  this.m.style.MozTransformOrigin = "bottom";
+  this.m.style.msTransformOrigin = "bottom";
+  this.m.style.OTransformOrigin = "bottom";
+  this.m.style.transformOrigin = "bottom";
+  this.s.style.webkitTransformOrigin = "bottom";
+  this.s.style.MozTransformOrigin = "bottom";
+  this.s.style.msTransformOrigin = "bottom";
+  this.s.style.OTransformOrigin = "bottom";
+  this.s.style.transformOrigin = "bottom";
+};
 
 /**
 * Retrieves the angle of the seconds hand for the currently set time
